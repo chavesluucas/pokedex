@@ -1,0 +1,84 @@
+@import '../../../config-scss/rem-calc.scss';
+
+//variavel para todos os padding que for de 20px
+$padding: rem-calc(20);
+
+
+//host pega todo o componente
+:host{
+    .list{
+        display: flex;
+        justify-content: space-between;
+    
+        flex-wrap: wrap;
+    
+        padding: $padding 0;
+    
+        .pokemon{
+            position: relative;
+            display: flex;
+            background-color: var(--white);
+            
+            width: calc(31% - 2.5rem);
+            height: rem-calc(157 - 40); //157 é o tamanho no figma e 40 é o valor do padding
+    
+            margin-bottom: rem-calc(10);
+            padding: $padding;
+    
+            border-radius: 10px;
+    
+            text-decoration: none;
+            color: var(--primary-color)
+        }
+    
+        .pokemon-status{
+            h2{
+                font-size: rem-calc(22);
+                font-style: italic;
+                font-weight: 700;
+                text-transform: capitalize;
+                margin-bottom: rem-calc(10);
+            }
+    
+            ul{
+                display: flex;
+                flex-direction: column;
+    
+                li{
+                    background: #e4e2e2;
+                    font-size: rem-calc(12);
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    border-radius: 50px;
+                
+                    width: rem-calc(60);
+                    margin-bottom: rem-calc(5);
+                }
+            }
+        }
+    
+        .pokemon-img{
+            position: absolute;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            height: rem-calc(90);
+            width: rem-calc(110);
+    
+            right: $padding;
+            bottom: $padding;
+    
+            background: url('../../../assets/background-poke.svg') no-repeat;
+    
+            img{
+                width: rem-calc(60);
+            }
+        }
+    
+    }
+}

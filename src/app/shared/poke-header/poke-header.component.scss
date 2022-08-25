@@ -1,0 +1,13 @@
+//Importanto o calc de rem
+@import '../../../config-scss/rem-calc.scss';
+
+//Host informa que é só para fazer a aplicação nesse componente, se tiver outro component tiver a mesma tag, não vai ter conflito
+:host{
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: rem-calc(40) 0;
+    }
+}

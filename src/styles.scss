@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+//A explicação de cada use desse está dentro do arquivo scss
+@import './config-scss/variables.scss';
+@import './config-scss/reset.scss';
+@import './config-scss/rem-calc.scss';
+@import './config-scss/btn.scss';
+@import './config-scss/animation.scss';
+
+//passando a cor do background para toda a aplicação
+html{
+    font-family: Roboto;
+    background: var(--primary-color);
+}
+
+//Vamos usar o main como container, então vamos passar valores especificos para eles
+main{
+    width: rem-calc(1200);
+    // max-width: rem-calc(600); ele usou esse, caso de problema é só usar ele
+    margin: 0 auto;
+    box-sizing: border-box;
+}

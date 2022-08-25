@@ -1,0 +1,6 @@
+//função para alterar tudo de pixal para rem, assim sempre que precisar só passar essa função
+
+@function rem-calc($size){
+    $value: $size / 16;
+    @return #{$value}rem;
+}

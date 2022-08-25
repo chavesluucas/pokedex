@@ -1,0 +1,5 @@
+<form>
+        <!-- keyup é a função que vai pegar o evento de search | # + algo vai pegar o elemento do input, e estamos mandando para dentro da função search que precisa receber o value que é uma string-->
+    <input type="text" #input (keyup)="search(input.value)" placeholder="Buscar Pokemon..." >
+    <img src="assets/search.svg" alt="Buscar pokemon">
+</form>
